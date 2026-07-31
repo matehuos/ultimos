@@ -1,4 +1,3 @@
----
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
 name: ultimos
@@ -7,7 +6,7 @@ description: Testando uma build customizada do bazzite com WMs.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bazzite-gnome
-image-version: stable # latest is also supported if you want new updates ASAP
+image-version: stable 
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -17,6 +16,17 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+  # Adicionando o Terra Repo via arquivo e instalando pacotes
+  - type: dnf
+    repos:
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+    install:
+      packages:
+        - terra-release
+        - nwg-look
+
+  # Adicionando repositório Copr e gerenciando pacotes nativos
   - type: dnf
     repos:
       copr:
@@ -30,8 +40,6 @@ modules:
         - hyprland-guiutils
     remove:
       packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
         - waydroid
         - waydroid-selinux
         - input-remapper
