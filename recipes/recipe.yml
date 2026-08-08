@@ -39,8 +39,7 @@ modules:
         - noctalia
         - hyprland-guiutils
         - mpv
-        - gwenview
-        - 
+        - gwenview 
     remove:
       packages:
         - waydroid
