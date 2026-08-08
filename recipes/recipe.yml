@@ -5,7 +5,7 @@ name: ultimos
 description: Testando uma build customizada do bazzite com WMs.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-gnome
+base-image: ghcr.io/ublue-os/bazzite
 image-version: stable 
 
 # module configuration, executed in order
@@ -38,6 +38,9 @@ modules:
         - niri
         - noctalia
         - hyprland-guiutils
+        - mpv
+        - gwenview
+        - 
     remove:
       packages:
         - waydroid
