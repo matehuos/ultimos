@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+---
 name: ultimos
 description: Testando uma build customizada do bazzite com WMs.
 base-image: ghcr.io/ublue-os/bazzite
