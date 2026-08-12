@@ -32,7 +32,6 @@ modules:
         - hyprland-guiutils
         - mpv
         - gwenview
-        - okular
         
     remove:
       packages:
