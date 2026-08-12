@@ -1,49 +1,50 @@
 ---
-config:
-  name: ultimos
-  description: Testando uma build customizada do bazzite com WMs.
-  base-image: ghcr.io/ublue-os/bazzite
-  image-version: stable
-  modules:
-    - type: files
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: ultimos
+description: Testando uma build customizada do bazzite com WMs.
+base-image: ghcr.io/ublue-os/bazzite
+image-version: stable
+
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: dnf
+    repos:
       files:
-        - source: system
-          destination: /
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+    install:
+      packages:
+        - terra-release
+        - nwg-look
 
-    - type: dnf
-      repos:
-        files:
-          - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-      install:
-        packages:
-          - terra-release
-          - nwg-look
+  - type: dnf
+    repos:
+      copr:
+        - lionheartp/Hyprland
+    install:
+      packages:
+        - adw-gtk3-theme
+        - hyprland
+        - noctalia
+        - hyprland-guiutils
+        - mpv
+        - gwenview
+    remove:
+      packages:
+        - waydroid
+        - waydroid-selinux
+        - input-remapper
 
-    - type: dnf
-      repos:
-        copr:
-          - lionheartp/Hyprland
-      install:
-        packages:
-          - adw-gtk3-theme
-          - hyprland
-          - noctalia
-          - hyprland-guiutils
-          - mpv
-          - gwenview
-      remove:
-        packages:
-          - waydroid
-          - waydroid-selinux
-          - input-remapper
+  - type: dnf
+    repos:
+      cleanup: true
+      files:
+        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+    install:
+      packages:
+        - brave-origin
 
-    - type: dnf
-      repos:
-        cleanup: true
-        files:
-          - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-      install:
-        packages:
-          - brave-origin
-
-    - type: signing
+  - type: signing
