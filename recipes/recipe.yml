@@ -40,6 +40,7 @@ modules:
         - mpv
         - gwenview
         - okular
+        
     remove:
       packages:
         - waydroid
