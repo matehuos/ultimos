@@ -35,11 +35,11 @@ modules:
       packages:
         - adw-gtk3-theme
         - hyprland
-        - niri
         - noctalia
         - hyprland-guiutils
         - mpv
-        - gwenview 
+        - gwenview
+        - okular
     remove:
       packages:
         - waydroid
