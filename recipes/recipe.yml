@@ -1,52 +1,49 @@
 ---
-name: ultimos
-description: Testando uma build customizada do bazzite com WMs.
-base-image: ghcr.io/ublue-os/bazzite
-image-version: stable 
-modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
-  # Adicionando o Terra Repo via arquivo e instalando pacotes
-  - type: dnf
-    repos:
+config:
+  name: ultimos
+  description: Testando uma build customizada do bazzite com WMs.
+  base-image: ghcr.io/ublue-os/bazzite
+  image-version: stable
+  modules:
+    - type: files
       files:
-        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-    install:
-      packages:
-        - terra-release
-        - nwg-look
+        - source: system
+          destination: /
 
-  # Adicionando repositório Copr e gerenciando pacotes nativos
-  - type: dnf
-    repos:
-      copr:
-        - lionheartp/Hyprland
-    install:
-      packages:
-        - adw-gtk3-theme
-        - hyprland
-        - noctalia
-        - hyprland-guiutils
-        - mpv
-        - gwenview
-        
-    remove:
-      packages:
-        - waydroid
-        - waydroid-selinux
-        - input-remapper
+    - type: dnf
+      repos:
+        files:
+          - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+      install:
+        packages:
+          - terra-release
+          - nwg-look
 
-  # Adicionando repositório e instalando o Brave Browser Nightly
-  - type: dnf
-    repos:
-      cleanup: true
-      files:
-        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-    install:
-      packages:
-        - brave-origin
+    - type: dnf
+      repos:
+        copr:
+          - lionheartp/Hyprland
+      install:
+        packages:
+          - adw-gtk3-theme
+          - hyprland
+          - noctalia
+          - hyprland-guiutils
+          - mpv
+          - gwenview
+      remove:
+        packages:
+          - waydroid
+          - waydroid-selinux
+          - input-remapper
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+    - type: dnf
+      repos:
+        cleanup: true
+        files:
+          - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+      install:
+        packages:
+          - brave-origin
+
+    - type: signing
