@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: ultimos
 description: Testando uma build customizada do bazzite com WMs.
-base-image: ghcr.io/ublue-os/bazzite
+base-image: ghcr.io/ublue-os/bazzite-gnome
 image-version: stable
 
 modules:
@@ -24,6 +24,7 @@ modules:
     repos:
       copr:
         - lionheartp/Hyprland
+        - paolino/hyprmoncfg
     install:
       packages:
         - adw-gtk3-theme
@@ -31,7 +32,7 @@ modules:
         - noctalia
         - hyprland-guiutils
         - mpv
-        - gwenview
+        - hyprmoncfg # Added package
     remove:
       packages:
         - waydroid
