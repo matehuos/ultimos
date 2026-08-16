@@ -32,7 +32,9 @@ modules:
         - noctalia
         - hyprland-guiutils
         - mpv
-        - hyprmoncfg # Added package
+        - hyprmoncfg
+        - loupe
+        
     remove:
       packages:
         - waydroid
