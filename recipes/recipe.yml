@@ -25,6 +25,7 @@ modules:
       copr:
         - lionheartp/Hyprland
         - paolino/hyprmoncfg
+        - faugus/faugus-launcher
     install:
       packages:
         - adw-gtk3-theme
@@ -34,6 +35,7 @@ modules:
         - mpv
         - hyprmoncfg
         - loupe
+        - faugus-launcher
         
     remove:
       packages:
