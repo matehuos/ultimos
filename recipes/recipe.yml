@@ -34,14 +34,12 @@ modules:
         - hyprland-guiutils
         - mpv
         - hyprmoncfg
-        - loupe
         - faugus-launcher
         
     remove:
       packages:
         - waydroid
         - waydroid-selinux
-        - input-remapper
         - rom-properties
 
   - type: dnf
