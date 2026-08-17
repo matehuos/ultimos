@@ -40,6 +40,7 @@ modules:
         - waydroid
         - waydroid-selinux
         - input-remapper
+        - rom-properties
 
   - type: dnf
     repos:
