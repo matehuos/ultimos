@@ -3,7 +3,7 @@
 name: ultimos
 description: Testando uma build customizada do bazzite com WMs.
 base-image: ghcr.io/ublue-os/bazzite-gnome
-image-version: testing
+image-version: stable
 
 modules:
   - type: files
