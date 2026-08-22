@@ -35,7 +35,7 @@ modules:
         - mpv
         - hyprmoncfg
         - faugus-launcher
-        - neovim
+        - alacritty
         
     remove:
       packages:
