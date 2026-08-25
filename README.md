@@ -13,7 +13,7 @@ Este repositório tem o único propósito de ganhar experiência prática com fe
 - **Infraestrutura como Código (IaC):** Configuração e geração declarativa do sistema operacional.
 - **Automação CI/CD:** Pipelines para builds automatizados e publicação em registry OCI utilizando GitHub Actions.
 - **Cloud-Native & SO Imutável:** Uso do `recipe.yml` para entregar o sistema como uma imagem de contêiner atômica e inicializável.
-- **Segurança da Cadeia:** Imagens e verificação usando o `cosign` do Sigstore.
+- **Segurança:** Imagens e verificação usando o `cosign` do Sigstore.
 
 ## 📦 Pacotes Principais
 - **Hyprland** e ferramentas
