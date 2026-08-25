@@ -8,12 +8,20 @@ Para viabilizar a arquitetura deste projeto, utilizo ferramentas que simplificam
 - **Bazzite-gnome (Imagem Base):** O projeto não começa do zero. Utilizo o Bazzite (baseado no Fedora Silverblue) com interface GNOME como base. A imagem é customizada com a adição de WMs e outros pacotes.
 
 
-## 🚀 O que estou aprendendo e aplicando
-Este repositório é minha forma de ganhar experiência prática com ferramentas e conceitos modernos de **DevOps** e **Engenharia de Plataforma**:
+## 🚀 Motivação
+Este repositório tem o único propósito de ganhar experiência prática com ferramentas e conceitos modernos de **DevOps** e **Engenharia de Plataforma**:
 - **Infraestrutura como Código (IaC):** Configuração e geração declarativa do sistema operacional.
 - **Automação CI/CD:** Pipelines para builds automatizados e publicação em registry OCI utilizando GitHub Actions.
 - **Cloud-Native & SO Imutável:** Uso do `recipe.yml` para entregar o sistema como uma imagem de contêiner atômica e inicializável.
 - **Segurança da Cadeia:** Imagens e verificação usando o `cosign` do Sigstore.
+
+## 📦 Pacotes Principais
+- **Hyprland** e ferramentas
+- Niri
+- Noctalia Shell v5
+- Faugus Game Launcher
+
+
 
 ---
 
