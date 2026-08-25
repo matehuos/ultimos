@@ -38,6 +38,7 @@ modules:
         - alacritty
         - neovim
         - niri
+        - xwayland-satellite
         
     remove:
       packages:
