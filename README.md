@@ -5,7 +5,7 @@
 ## 🛠️ Ferramentas e Tecnologias Base
 Para viabilizar a arquitetura deste projeto, utilizo ferramentas que simplificam a criação de sistemas operacionais imutáveis:
 - **[BlueBuild](https://blue-build.org/):** Utilizado como o framework principal e sistema de build. Ele orquestra a montagem do sistema e automatiza o pipeline, facilitando a aplicação de práticas de Infraestrutura como Código (IaC).
-- **Bazzite-gnome (Imagem Base):** O projeto não começa do zero. Utilizo o Bazzite (baseado no Fedora Silverblue) com interface GNOME como base. A imagem é customizada com a adição de WMs e outros pacotes.
+- **[Bazzite](https://bazzite.gg):** O projeto não começa do zero. Utilizo o Bazzite (baseado no Fedora Silverblue) com interface GNOME como base. A imagem é customizada com a adição de WMs e outros pacotes.
 
 
 ## 🚀 Motivação
