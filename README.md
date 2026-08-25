@@ -4,16 +4,16 @@
 
 ## 🛠️ Ferramentas e Tecnologias Base
 Para viabilizar a arquitetura deste projeto, utilizo ferramentas que simplificam a criação de sistemas operacionais imutáveis:
-- **BlueBuild:** Utilizado como o framework principal e sistema de build. Ele orquestra a montagem do sistema e automatiza o pipeline, facilitando a aplicação de práticas de Infraestrutura como Código (IaC).
-- **Bazzite-GNOME (Imagem Base):** O projeto não começa do zero. Utilizo o Bazzite (baseado no Fedora Silverblue) com interface GNOME como fundação. A imagem é customizada com a adição de WMs e outros pacotes.
+- **[BlueBuild](https://blue-build.org/):** Utilizado como o framework principal e sistema de build. Ele orquestra a montagem do sistema e automatiza o pipeline, facilitando a aplicação de práticas de Infraestrutura como Código (IaC).
+- **Bazzite-gnome (Imagem Base):** O projeto não começa do zero. Utilizo o Bazzite (baseado no Fedora Silverblue) com interface GNOME como base. A imagem é customizada com a adição de WMs e outros pacotes.
 
 
 ## 🚀 O que estou aprendendo e aplicando
 Este repositório é minha forma de ganhar experiência prática com ferramentas e conceitos modernos de **DevOps** e **Engenharia de Plataforma**:
 - **Infraestrutura como Código (IaC):** Configuração e geração declarativa do sistema operacional.
-- **Automação CI/CD:** Criação de pipelines para builds automatizados e publicação em registry OCI utilizando GitHub Actions.
-- **Cloud-Native & SO Imutável:** Uso do `recipe.yml` para entregar o sistema como uma imagem de contêiner atômica e inicializável, garantindo zero degradação do sistema e facilitando rollbacks.
-- **Segurança da Cadeia de Suprimentos:** Práticas de assinatura criptográfica de imagens e verificação usando o `cosign` do Sigstore.
+- **Automação CI/CD:** Pipelines para builds automatizados e publicação em registry OCI utilizando GitHub Actions.
+- **Cloud-Native & SO Imutável:** Uso do `recipe.yml` para entregar o sistema como uma imagem de contêiner atômica e inicializável.
+- **Segurança da Cadeia:** Imagens e verificação usando o `cosign` do Sigstore.
 
 ---
 
