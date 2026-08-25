@@ -1,42 +1,42 @@
 # ultimos &nbsp; [![bluebuild build badge](https://github.com/matehuos/ultimos/actions/workflows/build.yml/badge.svg)](https://github.com/matehuos/ultimos/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+**ultimos** é um projeto de hobby que serve como um laboratório prático para complementar minha formação em Análise e Desenvolvimento de Sistemas e meus estudos contínuos em infraestrutura. Ele foca na construção de um sistema operacional desktop customizado e nativo em nuvem, criando um ambiente atômico e confiável.
 
-After setup, it is recommended you update this README to describe your custom image.
+## 🛠️ Ferramentas e Tecnologias Base
+Para viabilizar a arquitetura deste projeto, utilizo ferramentas que simplificam a criação de sistemas operacionais imutáveis:
+- **BlueBuild:** Utilizado como o framework principal e sistema de build. Ele orquestra a montagem do sistema e automatiza o pipeline, facilitando a aplicação de práticas de Infraestrutura como Código (IaC).
+- **Bazzite-GNOME (Imagem Base):** O projeto não começa do zero. Utilizo o Bazzite (baseado no Fedora Silverblue) com interface GNOME como fundação. A imagem é customizada com a adição de WMs e outros pacotes.
 
-## Installation
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+## 🚀 O que estou aprendendo e aplicando
+Este repositório é minha forma de ganhar experiência prática com ferramentas e conceitos modernos de **DevOps** e **Engenharia de Plataforma**:
+- **Infraestrutura como Código (IaC):** Configuração e geração declarativa do sistema operacional.
+- **Automação CI/CD:** Criação de pipelines para builds automatizados e publicação em registry OCI utilizando GitHub Actions.
+- **Cloud-Native & SO Imutável:** Uso do `recipe.yml` para entregar o sistema como uma imagem de contêiner atômica e inicializável, garantindo zero degradação do sistema e facilitando rollbacks.
+- **Segurança da Cadeia de Suprimentos:** Práticas de assinatura criptográfica de imagens e verificação usando o `cosign` do Sigstore.
 
-To rebase an existing atomic Fedora installation to the latest build:
+---
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/matehuos/ultimos:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/matehuos/ultimos:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+## 💻 Instalação
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+Para atualizar (rebase) uma instalação atômica existente do Fedora/BazziteOS para a build mais recente deste projeto:
 
-## ISO
+1. **Faça o rebase para a imagem não assinada** (para instalar as chaves de assinatura e políticas adequadas):
+   ```bash
+   rpm-ostree rebase ostree-unverified-registry:ghcr.io/matehuos/ultimos:latest
+   systemctl reboot
+   ```
+2. **Faça o rebase para a imagem assinada** (para garantir que futuras atualizações sejam seguras e verificadas):
+   ```bash
+   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/matehuos/ultimos:latest
+   systemctl reboot
+   ```
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/how-to/generate-iso/#_top). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+*Nota: A tag `latest` sempre apontará para a versão mais recente que corresponda à versão principal do Bazzite especificada na receita (`recipe.yml`), evitando atualizações acidentais de versão principal.*
 
-## Verification
+## 🛡️ Verificação de Segurança
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+As imagens geradas aqui são assinadas com segurança usando o [cosign](https://github.com/sigstore/cosign) do [Sigstore](https://www.sigstore.dev/). Para verificar a assinatura e a integridade da imagem, baixe o arquivo `cosign.pub` deste repositório e execute:
 
 ```bash
 cosign verify --key cosign.pub ghcr.io/matehuos/ultimos
