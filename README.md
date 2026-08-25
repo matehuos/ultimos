@@ -1,6 +1,6 @@
 # ultimos &nbsp; [![bluebuild build badge](https://github.com/matehuos/ultimos/actions/workflows/build.yml/badge.svg)](https://github.com/matehuos/ultimos/actions/workflows/build.yml)
 
-**ultimos** é um projeto de hobby que serve como um laboratório prático para complementar minha formação em Análise e Desenvolvimento de Sistemas e meus estudos contínuos em infraestrutura. Ele foca na construção de um sistema operacional desktop customizado e nativo em nuvem, criando um ambiente atômico e confiável.
+**ultimos** é um projeto de hobby que serve como um laboratório para meus interresses em infraestrutura, cloud e DevOps. Ele foca na construção de um sistema operacional desktop customizado e nativo em nuvem, criando um ambiente atômico e confiável.
 
 ## 🛠️ Ferramentas e Tecnologias Base
 Para viabilizar a arquitetura deste projeto, utilizo ferramentas que simplificam a criação de sistemas operacionais imutáveis:
