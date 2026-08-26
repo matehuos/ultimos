@@ -39,6 +39,7 @@ modules:
         - neovim
         - niri
         - xwayland-satellite
+        - android-tools
         
     remove:
       packages:
