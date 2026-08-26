@@ -26,6 +26,7 @@ modules:
         - lionheartp/Hyprland
         - paolino/hyprmoncfg
         - faugus/faugus-launcher
+        - monkeygold/nautilus-open-any-terminal
     install:
       packages:
         - adw-gtk3-theme
@@ -40,6 +41,7 @@ modules:
         - niri
         - xwayland-satellite
         - android-tools
+        - nautilus-open-any-terminal
         
     remove:
       packages:
