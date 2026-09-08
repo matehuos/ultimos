@@ -19,6 +19,7 @@ modules:
       packages:
         - terra-release
         - nwg-look
+        - umbriel-nightly
 
   - type: dnf
     repos:
@@ -31,7 +32,6 @@ modules:
       packages:
         - adw-gtk3-theme
         - hyprland
-        - umbriel-nightly
         - noctalia
         - hyprland-guiutils
         - mpv
