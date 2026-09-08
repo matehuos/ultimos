@@ -31,14 +31,12 @@ modules:
       packages:
         - adw-gtk3-theme
         - hyprland
+        - umbriel-nightly
         - noctalia
         - hyprland-guiutils
         - mpv
         - hyprmoncfg
         - faugus-launcher
-        - alacritty
-        - neovim
-        - niri
         - xwayland-satellite
         - android-tools
         
