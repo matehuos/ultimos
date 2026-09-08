@@ -25,10 +25,12 @@ modules:
     repos:
       copr:
         - faugus/faugus-launcher
+        - monkeygold/nautilus-open-any-terminal
         
     install:
       packages:
         - kitty
+        - nautilus-open-any-terminal
         - adw-gtk3-theme
         - noctalia
         - mpv
