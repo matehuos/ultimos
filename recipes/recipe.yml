@@ -24,21 +24,17 @@ modules:
   - type: dnf
     repos:
       copr:
-        - lionheartp/Hyprland
-        - paolino/hyprmoncfg
         - faugus/faugus-launcher
         
     install:
       packages:
         - adw-gtk3-theme
-        - hyprland
         - noctalia
-        - hyprland-guiutils
         - mpv
-        - hyprmoncfg
         - faugus-launcher
         - xwayland-satellite
         - android-tools
+        - niri
         
     remove:
       packages:
