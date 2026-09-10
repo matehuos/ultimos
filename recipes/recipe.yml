@@ -26,6 +26,7 @@ modules:
       copr:
         - faugus/faugus-launcher
         - monkeygold/nautilus-open-any-terminal
+        - lionheartp/Hyprland
         
     install:
       packages:
@@ -38,12 +39,15 @@ modules:
         - xwayland-satellite
         - android-tools
         - niri
+        - hyprland
+        - hyprland-guiutils
         
     remove:
       packages:
         - waydroid
         - waydroid-selinux
         - rom-properties
+
 
   - type: dnf
     repos:
