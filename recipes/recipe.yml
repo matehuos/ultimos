@@ -1,4 +1,3 @@
----
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: ultimos
 description: Testando uma build customizada do bazzite com WMs.
@@ -13,23 +12,24 @@ modules:
 
   - type: dnf
     repos:
+      cleanup: true
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-    install:
-      packages:
-        - terra-release
-        - nwg-look
-        - umbriel-nightly
-
-  - type: dnf
-    repos:
+        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
       copr:
         - faugus/faugus-launcher
         - monkeygold/nautilus-open-any-terminal
         - lionheartp/Hyprland
         
     install:
+      install-weak-deps: false
       packages:
+        # Repositórios Terra
+        - terra-release
+        - nwg-look
+        - umbriel-nightly
+        
+        # Pacotes do COPR e base
         - kitty
         - nautilus-open-any-terminal
         - adw-gtk3-theme
@@ -41,21 +41,12 @@ modules:
         - niri
         - hyprland
         - hyprland-guiutils
+        - brave-origin
         
     remove:
       packages:
         - waydroid
         - waydroid-selinux
         - rom-properties
-
-
-  - type: dnf
-    repos:
-      cleanup: true
-      files:
-        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-    install:
-      packages:
-        - brave-origin
 
   - type: signing
