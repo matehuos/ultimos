@@ -27,9 +27,8 @@ modules:
         # Repositórios Terra
         - terra-release
         - nwg-look
+        - fish
         - umbriel-nightly
-        
-        # Pacotes do COPR e base
         - kitty
         - nautilus-open-any-terminal
         - adw-gtk3-theme
@@ -42,6 +41,7 @@ modules:
         - hyprland
         - hyprland-guiutils
         - brave-origin
+
         
     remove:
       packages:
