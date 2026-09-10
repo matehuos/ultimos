@@ -24,7 +24,6 @@ modules:
     install:
       install-weak-deps: false
       packages:
-        # Repositórios Terra
         - terra-release
         - nwg-look
         - fish
@@ -48,5 +47,6 @@ modules:
         - waydroid
         - waydroid-selinux
         - rom-properties
+        - input-remapper
 
   - type: signing
