@@ -48,5 +48,7 @@ modules:
         - waydroid-selinux
         - rom-properties
         - input-remapper
+        - malcontent
+        - malcontent-control
 
   - type: signing
