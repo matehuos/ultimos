@@ -28,7 +28,6 @@ modules:
         - nwg-look
         - fish
         - umbriel
-        - xdg-desktop-portal-umbriel
         - kitty
         - nautilus-open-any-terminal
         - adw-gtk3-theme
