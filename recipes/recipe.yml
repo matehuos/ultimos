@@ -24,11 +24,9 @@ modules:
       install-weak-deps: false
       packages:
         - nwg-look
-        - fish
-        - umbriel
+        - umbriel-nightly
         - kitty
         - nautilus-open-any-terminal
-        - adw-gtk3-theme
         - noctalia
         - mpv
         - faugus-launcher
