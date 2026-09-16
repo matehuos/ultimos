@@ -14,7 +14,6 @@ modules:
     repos:
       cleanup: true
       files:
-        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
       copr:
         - faugus/faugus-launcher
@@ -24,7 +23,6 @@ modules:
     install:
       install-weak-deps: false
       packages:
-        - terra-release
         - nwg-look
         - fish
         - umbriel
