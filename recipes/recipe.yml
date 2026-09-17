@@ -22,7 +22,7 @@ modules:
         - lionheartp/Hyprland
         
     install:
-      install-weak-deps: true
+      install-weak-deps: false
       packages:
         - nwg-look
         - umbriel-nightly
@@ -37,7 +37,7 @@ modules:
         - hyprland-guiutils
         - brave-origin
         # Definição do repositório específico para o noctalia
-        - repo: updates
+        - repo: fedora
           packages:
             - noctalia
 
