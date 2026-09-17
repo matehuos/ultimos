@@ -1,5 +1,4 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-
 name: ultimos
 description: Testando uma build customizada do bazzite com WMs.
 base-image: ghcr.io/ublue-os/bazzite-gnome
@@ -14,50 +13,35 @@ modules:
   - type: dnf
     repos:
       cleanup: true
-
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-
       copr:
         - faugus/faugus-launcher
         - monkeygold/nautilus-open-any-terminal
         - lionheartp/Hyprland
-
+        
     install:
       install-weak-deps: false
-
       packages:
-
-        # ==========================================================
-        # Fedora / repositórios oficiais
-        # ==========================================================
-        - repo: updates
-          packages:
-            - noctalia
-
-        # ==========================================================
-        # COPR oficial do Faugus Launcher
-        # ==========================================================
-        - repo: copr:copr.fedorainfracloud.org:faugus:faugus-launcher
-          packages:
-            - faugus-launcher
-
-        # ==========================================================
-        # Pacotes com resolução normal
-        # ==========================================================
         - nwg-look
         - umbriel-nightly
         - kitty
         - nautilus-open-any-terminal
         - mpv
+        - faugus-launcher
         - xwayland-satellite
         - android-tools
         - niri
         - hyprland
         - hyprland-guiutils
         - brave-origin
+        # Definição do repositório específico para o noctalia
+        - repo: updates
+          packages:
+            - noctalia
 
+        
     remove:
       packages:
         - waydroid
