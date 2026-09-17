@@ -22,7 +22,7 @@ modules:
         - lionheartp/Hyprland
         
     install:
-      install-weak-deps: false
+      install-weak-deps: true
       packages:
         - nwg-look
         - umbriel-nightly
